@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استبيان رأي المستخدم</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            background-color: darkgray;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+        label, input, select, textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 1em;
+        }
+        .radio-group {
+            display: flex;
+            gap: 2em;
+            align-items: center;
+            margin-bottom: 1em;
+        }
+        input[type="submit"] {
+            width: auto;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>استبيان رأي المستخدم</h1>
+    <form>
+        <label for="prenom">الاسم الشخصي</label>
+        <input type="text" id="prenom" name="prenom" required>
+
+        <label for="nom">الاسم العائلي</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="date_naissance">تاريخ الولادة</label>
+        <input type="date" id="date_naissance" name="date_naissance" required>
+
+        <label>الجنس</label>
+        <div class="radio-group">
+            <label><input type="radio" name="genre" value="ذكر" required> ذكر</label>
+            <label><input type="radio" name="genre" value="أنثى" required> أنثى</label>
+        </div>
+
+        <label for="email">البريد الإلكتروني</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="gouvernorat">الولاية</label>
+        <select id="gouvernorat" name="gouvernorat" required>
+            <option value="أريانة">أريانة</option>
+            <option value="باجة">باجة</option>
+            <option value="بن عروس">بن عروس</option>
+            <option value="بنزرت">بنزرت</option>
+            <option value="تطاوين">تطاوين</option>
+            <option value="توزر">توزر</option>
+            <option value="تونس">تونس</option>
+            <option value="جندوبة">جندوبة</option>
+            <option value="زغوان">زغوان</option>
+            <option value="سليانة">سليانة</option>
+            <option value="سوسة">سوسة</option>
+            <option value="سيدي بوزيد">سيدي بوزيد</option>
+            <option value="صفاقس">صفاقس</option>
+            <option value="قابس">قابس</option>
+            <option value="القيروان">القيروان</option>
+            <option value="القصرين">القصرين</option>
+            <option value="قبلي">قبلي</option>
+            <option value="الكاف">الكاف</option>
+            <option value="مدنين">مدنين</option>
+            <option value="المنستير">المنستير</option>
+            <option value="منوبة">منوبة</option>
+            <option value="المهدية">المهدية</option>
+            <option value="نابل">نابل</option>
+            <option value="قفصة">قفصة</option>
+        </select>
+
+        <label for="avis">رأيك حول الموقع</label>
+        <textarea id="avis" name="avis" rows="4" required></textarea>
+
+        <label for="note">التقييم (من 1 إلى 5)</label>
+        <input type="number" id="note" name="note" min="1" max="5" required>
+
+        <input type="submit" value="إرسال">
+    </form>
+
+</body>
+</html>

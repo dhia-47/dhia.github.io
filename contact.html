@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>النظام الشمسي - نموذج تقديم رأي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>نموذج تقديم رأي</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="planets.html">الكواكب</a></li>
+                <li><a href="about.html">معلومات</a></li>
+                <li><a href="contact.html">تقديم رأي</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">الاسم الكامل:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">النوع:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">اختر الجنس</option>
+                        <option value="male">ذكر</option>
+                        <option value="female">أنثى</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="governorate">الولاية:</label>
+                    <select id="governorate" name="governorate" required>
+                        <option value="">اختر الولاية</option>
+                        <option value="tunis">تونس</option>
+                        <option value="ariana">أريانة</option>
+                        <option value="ben-arous">بن عروس</option>
+                        <option value="manouba">منوبة</option>
+                        <option value="nabeul">نابل</option>
+                        <option value="zaghouan">زغوان</option>
+                        <option value="bizerte">بنزرت</option>
+                        <option value="beja">باجة</option>
+                        <option value="jendouba">جندوبة</option>
+                        <option value="kef">الكاف</option>
+                        <option value="siliana">سليانة</option>
+                        <option value="kairouan">القيروان</option>
+                        <option value="kasserine">القصرين</option>
+                        <option value="sidi-bouzid">سيدي بوزيد</option>
+                        <option value="sousse">سوسة</option>
+                        <option value="monastir">المنستير</option>
+                        <option value="mahdia">المهدية</option>
+                        <option value="sfax">صفاقس</option>
+                        <option value="gabes">قابس</option>
+                        <option value="medenine">مدنين</option>
+                        <option value="tataouine">تطاوين</option>
+                        <option value="gafsa">قفصة</option>
+                        <option value="tozeur">توزر</option>
+                        <option value="kebili">قبلي</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="rating">التقييم (من 1 إلى 5):</label>
+                    <select id="rating" name="rating" required>
+                        <option value="">اختر التقييم</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="feedback">رأيك:</label>
+                    <textarea id="feedback" name="feedback" rows="5" required></textarea>
+                </div>
+                <button type="submit">إرسال</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 جميع الحقوق محفوظة</p>
+    </footer>
+</body>
+</html>
