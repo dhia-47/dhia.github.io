@@ -1,30 +1,27 @@
 
-body, h2, p, ul, li, nav, header, main, footer {
+body, h1, h2, p, ul, li, nav, header, main, footer {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: black;
-    font-size: large;
-}
-h1{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: black; 
+    font-weight: bold;
 }
 
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
+    color: #333;
+    direction: rtl; 
+}
+
+h1, h2 {
     color: #8046ca;
-    direction: rtl;
 }
 
 header {
     background-color: #8046ca;
     color: #fff;
-    padding: 1rem 0;
+    padding: 1rem;
     text-align: center;
 }
 
@@ -32,6 +29,7 @@ nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
+    padding: 0.5rem;
 }
 
 nav ul li {
@@ -50,16 +48,22 @@ nav ul li a:hover {
 
 main {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 2rem;
 }
+
 
 article {
     background-color: #fff;
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+article:hover {
+    transform: translateY(-5px);
 }
 
 article h2 {
@@ -69,6 +73,8 @@ article h2 {
 
 article p {
     margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #555;
 }
 
 footer {
@@ -79,20 +85,6 @@ footer {
     margin-top: 2rem;
 }
 
-@media (max-width: 768px) {
-    main {
-        grid-template-columns: 1fr;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 0.5rem 0;
-    }
-}
 
 form {
     max-width: 600px;
@@ -100,7 +92,7 @@ form {
     background-color: #fff;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -115,7 +107,8 @@ label {
 
 input[type="text"],
 input[type="email"],
-textarea {
+textarea,
+select {
     width: 100%;
     padding: 0.8rem;
     border: 1px solid #ccc;
@@ -125,9 +118,9 @@ textarea {
     transition: border-color 0.3s;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
+input:focus,
+textarea:focus,
+select:focus {
     border-color: #0077cc;
 }
 
@@ -146,45 +139,29 @@ button:hover {
     background-color: #005fa3;
 }
 
-select {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s;
-    appearance: none;
-}
 
-select:focus {
-    border-color: #0077cc;
-}
 .planets-section {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     padding: 20px;
 }
 
 .planet-card {
-    display: flex;
-    align-items: center;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    padding: 15px;
-}
-
-.planet-info {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    padding: 15px;
+    text-align: center;
 }
 
 .planet-img {
-    width: 150px; 
+    width: 150px;
     height: auto;
-    margin-right: 20px;
+    margin-bottom: 15px;
     border-radius: 8px;
     transition: transform 0.3s ease;
 }
@@ -203,3 +180,22 @@ select:focus {
     margin: 5px 0;
 }
 
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .planet-card {
+        flex-direction: column;
+    }
+}
